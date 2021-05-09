@@ -2,6 +2,15 @@
 
 ### Component Crud for Begginers
 
+### Example: Into file ".env", insert lines and change fields. Let's Rock!
+
+- DB_DRIVER=mysql
+- DB_HOST=127.0.0.1
+- DB_PORT=3306
+- DB_DATABASE=db_name
+- DB_USER=root
+- DB_PASSWORD=12345
+
 ### index.php
 
 <pre>
