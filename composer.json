@@ -1,7 +1,7 @@
 {
     "name": "antenordev/crud",
     "description": "Component Crud for Begginers",
-    "version": "1.0",
+    "version": "0.0.1",
     "keywords": ["crud", "crud-php", "php"],
     "license": "MIT",
     "authors": [
