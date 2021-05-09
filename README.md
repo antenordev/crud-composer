@@ -6,49 +6,30 @@
 
 <pre>
 
-<?php
-/**
-* 
-* 
-*      DOCUMENTATION EXAMPLE
-* 
-* 
-*/
+//DOCUMENTATION EXAMPLE
 
-###START{
+//START {
 
-/**
-* IMPORT COMPOSER AUTOLOAD
-*/
+//IMPORT COMPOSER AUTOLOAD
 require __DIR__ . '/vendor/autoload.php';
 
-/**
-* SET CLASS DEPENDECIES
-*/
+//SET CLASS DEPENDECIES
 use Crud\Crud;
 
-/**
-* LOAD ENVIRONMENT VAR
-*/
+//LOAD ENVIRONMENT VAR
 Crud::env(__DIR__);
 
-/**
-* LOAD CRUD
-*/
+//LOAD CRUD
 $crud = new Crud();
 
-/**
-* SET TABLES
-*/
+//SET TABLES
 $table = 'tab_client';
 $column = 'client'; // KEY STRANGER
 $id = 'tab_client_id'; // CUSTOM ID
 
-/**
-* 
-* ACTION METHODS
-* 
-*/
+//
+//ACTION METHODS :
+//
 
 // READ ALL IN TABLE
 $r = $crud->readAll('*', $table)->fetchAll(PDO::FETCH_ASSOC);
@@ -70,12 +51,8 @@ echo  STATUS_CRUD === true ? "\nATUALIZADO COM SUCESSO!\n" : "\nTENTE NOVAMENTE!
 $r = $crud->delete($table, $id, '?', array(57));
 echo  STATUS_CRUD === true ? "\nAPAGADO COM SUCESSO!\n" : "\nTENTE NOVAMENTE!\n";
 
-/**
-* TESTING
-*/
+//TESTING
 var_dump($r);
 
-###}END;
-?>
-
+//}END;
 </pre>
