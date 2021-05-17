@@ -1,5 +1,3 @@
-#crud
-
 ### Component Crud for Begginers
 
 ### Example: Into file ".env", insert lines and change fields.
