@@ -24,9 +24,9 @@ require __DIR__ . '/vendor/autoload.php';
 use Crud\Crud;
 
 //LOAD SEPARATE ENVIRONMENT VAR (.env)
-Crud::env(__DIR__);
+#Crud::env(__DIR__);
 
-or
+#or
 
 //LOAD CRUD WITH ENVIRONMENT (.env)
 $crud = new Crud(__DIR__);
@@ -40,26 +40,26 @@ $id = 'tab_client_id'; // CUSTOM ID
 
 // READ ALL IN TABLE
 $r = $crud->readAll('*', $table)->fetchAll(PDO::FETCH_ASSOC);
-foreach ($r as $k) { print_r($k) . "\n"; }
+#foreach ($r as $k) { print_r($k) . "\n"; }
 
 // CREATE LINE
-$r = $crud->create($table, $column, '?,?', array(1029, 1));
-echo  STATUS_CRUD === true ? "\nGRAVADO COM SUCESSO!\n" : "\nTENTE NOVAMENTE!\n";
+#$r = $crud->create($table, $column, '?,?', array(1029, 1));
+#echo  STATUS_CRUD === true ? "\nGRAVADO COM SUCESSO!\n" : "\nTENTE NOVAMENTE!\n";
 
 // READ LINE
-$r = $crud->read('*', $table, $id, '?', array(1))->fetchAll(PDO::FETCH_ASSOC);
-foreach ($r as $k) { echo $k[$column] . "\n"; }
+#$r = $crud->read('*', $table, $id, '?', array(1))->fetchAll(PDO::FETCH_ASSOC);
+#foreach ($r as $k) { echo $k[$column] . "\n"; }
 
 // UPDATE LINE
-$r = $crud->update($table, $column, 120, $id, '?', array(2));
-echo  STATUS_CRUD === true ? "\nATUALIZADO COM SUCESSO!\n" : "\nTENTE NOVAMENTE!\n";
+#$r = $crud->update($table, $column, 120, $id, '?', array(2));
+#echo  STATUS_CRUD === true ? "\nATUALIZADO COM SUCESSO!\n" : "\nTENTE NOVAMENTE!\n";
 
 // DELETE LINE
-$r = $crud->delete($table, $id, '?', array(57));
-echo  STATUS_CRUD === true ? "\nAPAGADO COM SUCESSO!\n" : "\nTENTE NOVAMENTE!\n";
+#$r = $crud->delete($table, $id, '?', array(57));
+#echo  STATUS_CRUD === true ? "\nAPAGADO COM SUCESSO!\n" : "\nTENTE NOVAMENTE!\n";
 
 //TESTING
-#var_dump($r);
+var_dump($r);
 
 //}END;
 </pre>
