@@ -38,9 +38,7 @@ $table = 'tab_client';
 $column = 'client'; // KEY STRANGER
 $id = 'tab_client_id'; // CUSTOM ID
 
-//
-//ACTION METHODS :
-//
+//ACTION METHODS
 
 // READ ALL IN TABLE
 $r = $crud->readAll('*', $table)->fetchAll(PDO::FETCH_ASSOC);
