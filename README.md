@@ -59,7 +59,7 @@ $r = $crud->delete($table, $id, '?', array(57));
 echo  STATUS_CRUD === true ? "\nAPAGADO COM SUCESSO!\n" : "\nTENTE NOVAMENTE!\n";
 
 //TESTING
-var_dump($r);
+#var_dump($r);
 
 //}END;
 </pre>
