@@ -8,19 +8,30 @@ use Crud\Database;
 
 class Crud extends Database
 {
-
+    /**
+     * Method init
+     * @param string $dir = null Absolute Path .env
+     */
     public function __construct($dir = null)
     {
+        // Test if exists string $dir
         if ($dir != null) {
             Environment::load($dir);
         }
     }
 
+    /**
+     * Method env
+     * @param string $dir Absolute Path .env
+     */
     public static function env($dir)
     {
         Environment::load($dir);
     }
 
+    /**
+     * Attribute crud and count
+     */
     private $crud, $count;
 
     /**
@@ -131,5 +142,4 @@ class Crud extends Database
         $this->stmt("DELETE FROM {$table} WHERE {$id}={$value};", $params);
         return $this->crud;
     }
-
 }
