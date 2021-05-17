@@ -9,9 +9,11 @@ use Crud\Database;
 class Crud extends Database
 {
 
-    public function __construct()
+    public function __construct($dir = null)
     {
-        Environment::load(__DIR__);
+        if ($dir != null) {
+            Environment::load($dir);
+        }
     }
 
     public static function env($dir)
