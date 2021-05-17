@@ -25,11 +25,13 @@ require __DIR__ . '/vendor/autoload.php';
 //SET CLASS DEPENDECIES
 use Crud\Crud;
 
-//LOAD ENVIRONMENT VAR
+//LOAD SEPARATE ENVIRONMENT VAR (.env)
 Crud::env(__DIR__);
 
-//LOAD CRUD
-$crud = new Crud();
+or
+
+//LOAD CRUD WITH ENVIRONMENT (.env)
+$crud = new Crud(__DIR__);
 
 //SET TABLES
 $table = 'tab_client';
